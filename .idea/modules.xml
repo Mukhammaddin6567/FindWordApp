@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/FindWordApp.iml" filepath="$PROJECT_DIR$/.idea/modules/FindWordApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/FindWordApp.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/FindWordApp.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/FindWordApp.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/FindWordApp.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/FindWordApp.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/FindWordApp.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/FindWordApp.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/FindWordApp.app.unitTest.iml" />
+    </modules>
+  </component>
+</project>

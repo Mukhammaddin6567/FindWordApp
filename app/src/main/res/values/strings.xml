@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">4 Фотки 1 Слово</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_play">Играть</string>
+    <string name="text_settings">Настройки</string>
+    <string name="text_sound">Звук</string>
+    <string name="text_continue">Дальше</string>
+    <string name="text_greetings">ВЕЛИКОЛЕПНО</string>
+</resources>

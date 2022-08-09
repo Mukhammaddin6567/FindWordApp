@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".ui.GameFragment">
+
+    <View
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_32sdp"
+        android:background="@color/color_toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_back"
+        style="@style/StyleIcon"
+        android:background="@drawable/selector_back"
+        app:layout_constraintBottom_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="@id/toolbar"
+        app:layout_constraintTop_toTopOf="@id/toolbar" />
+
+    <TextView
+        android:id="@+id/current_coins"
+        style="@style/StyleTextCoins"
+        app:drawableStartCompat="@drawable/ic_coin"
+        app:layout_constraintBottom_toBottomOf="@id/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="1024" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image_level"
+        android:layout_width="@dimen/_64sdp"
+        android:layout_height="@dimen/_64sdp"
+        android:src="@drawable/ic_level"
+        app:layout_constraintBottom_toBottomOf="@id/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <TextView
+        android:id="@+id/text_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/museosans900"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintBottom_toBottomOf="@id/image_level"
+        app:layout_constraintEnd_toEndOf="@id/image_level"
+        app:layout_constraintStart_toStartOf="@id/image_level"
+        app:layout_constraintTop_toTopOf="@id/image_level"
+        tools:text="9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <FrameLayout
+        android:id="@+id/container_photo1"
+        style="@style/StyleContainerImages"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_4sdp"
+        android:layout_marginBottom="@dimen/_4sdp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image1"
+            style="@style/StyleImages"
+            android:src="@drawable/photo1_1" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/container_photo2"
+        style="@style/StyleContainerImages"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_4sdp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image2"
+            style="@style/StyleImages"
+            android:src="@drawable/photo1_2" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/container_photo3"
+        style="@style/StyleContainerImages"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/_4sdp"
+        android:layout_marginBottom="@dimen/_8sdp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image3"
+            style="@style/StyleImages"
+            android:src="@drawable/photo1_3" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/container_photo4"
+        style="@style/StyleContainerImages"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_8sdp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image4"
+            style="@style/StyleImages"
+            android:src="@drawable/photo1_4" />
+    </FrameLayout>
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow_images"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="@dimen/_8sdp"
+        app:constraint_referenced_ids="container_photo1,container_photo2,container_photo3,container_photo4"
+        app:flow_horizontalGap="@dimen/_8sdp"
+        app:flow_maxElementsWrap="2"
+        app:flow_verticalGap="@dimen/_8sdp"
+        app:flow_wrapMode="chain"
+        app:layout_constraintBottom_toTopOf="@id/line1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_level" />
+
+    <View
+        android:id="@+id/view_greetings"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_56sdp"
+        android:background="#BF000000"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/container_photo1" />
+
+    <View
+        android:id="@+id/view_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#BF060A1F"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/text_greetings"
+        style="@style/StyleTextGreetings"
+        android:text="@string/text_greetings"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/view_greetings"
+        app:layout_constraintEnd_toEndOf="@id/view_greetings"
+        app:layout_constraintStart_toStartOf="@id/view_greetings"
+        app:layout_constraintTop_toTopOf="@id/view_greetings" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icon_coin"
+        android:layout_width="@dimen/_64sdp"
+        android:layout_height="@dimen/_64sdp"
+        android:src="@drawable/coins_4"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/line2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/coins_count"
+        style="@style/StyleTextCollectedCoins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+4"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/icon_coin"
+        app:layout_constraintEnd_toEndOf="@id/icon_coin"
+        app:layout_constraintStart_toStartOf="@id/icon_coin"
+        app:layout_constraintTop_toBottomOf="@id/icon_coin" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image_rays"
+        android:layout_width="@dimen/_256sdp"
+        android:layout_height="@dimen/_256sdp"
+        android:src="@drawable/success_ray_blue"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/line2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/line1" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_continue"
+        style="@style/StyleContinueButton"
+        android:text="@string/text_continue"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line2" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/container_answers"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/answer_glow"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/_8sdp"
+        app:layout_constraintBottom_toTopOf="@id/line2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line1">
+
+        <TextView
+            android:id="@+id/answer1"
+            style="@style/TextViewAnswer" />
+
+        <TextView
+            android:id="@+id/answer2"
+            style="@style/TextViewAnswer" />
+
+        <TextView
+            android:id="@+id/answer3"
+            style="@style/TextViewAnswer" />
+
+        <TextView
+            android:id="@+id/answer4"
+            style="@style/TextViewAnswer" />
+
+        <TextView
+            android:id="@+id/answer5"
+            style="@style/TextViewAnswer" />
+
+        <TextView
+            android:id="@+id/answer6"
+            style="@style/TextViewAnswer" />
+
+        <TextView
+            android:id="@+id/answer7"
+            style="@style/TextViewAnswer" />
+
+        <TextView
+            android:id="@+id/answer8"
+            style="@style/TextViewAnswer" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line2">
+
+        <TextView
+            android:id="@+id/variant1"
+            style="@style/TextViewVariant"
+            app:layout_constraintDimensionRatio="1:1" />
+
+        <TextView
+            android:id="@+id/variant2"
+            style="@style/TextViewVariant"
+            app:layout_constraintDimensionRatio="1:1" />
+
+        <TextView
+            android:id="@+id/variant3"
+            style="@style/TextViewVariant"
+            app:layout_constraintDimensionRatio="1:1" />
+
+        <TextView
+            android:id="@+id/variant4"
+            style="@style/TextViewVariant"
+            app:layout_constraintDimensionRatio="1:1" />
+
+        <TextView
+            android:id="@+id/variant5"
+            style="@style/TextViewVariant"
+            app:layout_constraintDimensionRatio="1:1" />
+
+        <TextView
+            android:id="@+id/variant6"
+            style="@style/TextViewVariant"
+            app:layout_constraintDimensionRatio="1:1" />
+
+        <TextView
+            android:id="@+id/variant7"
+            style="@style/TextViewVariant"
+            app:layout_constraintDimensionRatio="1:1" />
+
+        <TextView
+            android:id="@+id/variant8"
+            style="@style/TextViewVariant"
+            app:layout_constraintDimensionRatio="1:1" />
+
+        <TextView
+            android:id="@+id/variant9"
+            style="@style/TextViewVariant"
+            app:layout_constraintDimensionRatio="1:1" />
+
+        <TextView
+            android:id="@+id/variant10"
+            style="@style/TextViewVariant"
+            app:layout_constraintDimensionRatio="1:1" />
+
+        <TextView
+            android:id="@+id/variant11"
+            style="@style/TextViewVariant"
+            app:layout_constraintDimensionRatio="1:1" />
+
+        <TextView
+            android:id="@+id/variant12"
+            style="@style/TextViewVariant"
+            app:layout_constraintDimensionRatio="1:1" />
+
+        <androidx.constraintlayout.helper.widget.Flow
+            android:id="@+id/flow_variants"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_16sdp"
+            app:constraint_referenced_ids="variant1,variant2,variant3,variant4,variant5,variant6,variant7,variant8,variant9,variant10,variant11,variant12"
+            app:flow_horizontalBias="0"
+            app:flow_horizontalGap="@dimen/_8sdp"
+            app:flow_horizontalStyle="packed"
+            app:flow_maxElementsWrap="6"
+            app:flow_verticalBias="0"
+            app:flow_verticalGap="0dp"
+            app:flow_wrapMode="chain"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

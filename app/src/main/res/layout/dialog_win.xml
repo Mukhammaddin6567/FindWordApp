@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".ui.GameFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <View
+        android:id="@+id/view_greetings"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_56sdp"
+        android:background="#BF000000"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#BF060A1F" />
+
+    <TextView
+        style="@style/StyleTextGreetings"
+        android:text="@string/text_greetings"
+        app:layout_constraintBottom_toBottomOf="@id/view_greetings"
+        app:layout_constraintEnd_toEndOf="@id/view_greetings"
+        app:layout_constraintStart_toStartOf="@id/view_greetings"
+        app:layout_constraintTop_toTopOf="@id/view_greetings" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icon_coin"
+        android:layout_width="@dimen/_64sdp"
+        android:layout_height="@dimen/_64sdp"
+        android:src="@drawable/coins_4"
+        app:layout_constraintBottom_toTopOf="@id/line2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/icon_coin"
+        app:layout_constraintEnd_toEndOf="@id/icon_coin"
+        app:layout_constraintStart_toStartOf="@id/icon_coin"
+        app:layout_constraintBottom_toBottomOf="@id/icon_coin"
+        style="@style/StyleTextCollectedCoins"
+        android:text="+4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image_rays"
+        android:layout_width="@dimen/_256sdp"
+        android:layout_height="@dimen/_256sdp"
+        android:src="@drawable/success_ray_blue"
+        app:layout_constraintBottom_toTopOf="@+id/line2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/line1" />
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_continue"
+        style="@style/StyleContinueButton"
+        android:text="@string/text_continue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

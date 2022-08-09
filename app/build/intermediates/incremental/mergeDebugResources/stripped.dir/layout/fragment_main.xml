@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".ui.MainFragment">
+
+    <View
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_32sdp"
+        android:background="@color/color_toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_settings"
+        style="@style/StyleIcon"
+        android:background="@drawable/selector_settings"
+        app:layout_constraintBottom_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="@id/toolbar"
+        app:layout_constraintTop_toTopOf="@id/toolbar"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/current_coins"
+        style="@style/StyleTextCoins"
+        app:drawableStartCompat="@drawable/ic_coin"
+        app:layout_constraintBottom_toBottomOf="@id/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="0" />
+
+    <FrameLayout
+        android:id="@+id/container_photo1"
+        style="@style/StyleContainerImages">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image1"
+            style="@style/StyleImages"
+            android:src="@drawable/photo1_1" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/container_photo2"
+        style="@style/StyleContainerImages">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image2"
+            style="@style/StyleImages"
+            android:src="@drawable/photo1_2" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/container_photo3"
+        style="@style/StyleContainerImages">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image3"
+            style="@style/StyleImages"
+            android:src="@drawable/photo1_3" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/container_photo4"
+        style="@style/StyleContainerImages">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image4"
+            style="@style/StyleImages"
+            android:src="@drawable/photo1_4" />
+    </FrameLayout>
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow_images"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="@dimen/_32sdp"
+        app:flow_horizontalGap="@dimen/_4sdp"
+        app:flow_verticalGap="@dimen/_4sdp"
+        app:constraint_referenced_ids="container_photo1,container_photo2,container_photo3,container_photo4"
+        app:flow_maxElementsWrap="2"
+        app:flow_wrapMode="chain"
+        app:layout_constraintBottom_toTopOf="@id/line_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line_top" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:src="@drawable/ic_level"
+        app:layout_constraintBottom_toTopOf="@id/line_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line_top" />
+
+    <TextView
+        android:id="@+id/text_position"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/museosans900"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_20ssp"
+        app:layout_constraintBottom_toBottomOf="@+id/appCompatImageView"
+        app:layout_constraintEnd_toEndOf="@+id/appCompatImageView"
+        app:layout_constraintStart_toStartOf="@+id/appCompatImageView"
+        app:layout_constraintTop_toTopOf="@+id/appCompatImageView"
+        tools:text="10" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line_top"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.7" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_start"
+        style="@style/StyleStartButton"
+        android:text="@string/text_play"
+        app:layout_constraintBottom_toBottomOf="@+id/container_photo3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/container_photo4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
